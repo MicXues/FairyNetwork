@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); /*font-family: 'Inter', sans-serif;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-font: "Inter", sans-serif;
+  --main-color: #39beff;
+  --background-color: #24272b;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --description-color: #d2d0d0;
+
+  --green-color: #4aff6b;
+  --ip-copied-background: rgba(74, 255, 107, 0.17);
+  --ip-copied-icon-background: rgba(74, 255, 107, 0.5);
+
+  --copy-ip-button-background: rgba(57, 190, 255, 0.7);
+  --how-to-join-button-background: rgba(210, 208, 208, 0.2);
+  --stats-background: rgba(210, 208, 208, 0.05);
+  --stat-icon-background-2: rgba(57, 190, 255, 0.5);
+
+  --scroll-bar: rgba(210, 208, 208, 0.3);
+  --scroll-bar-hover: #555555ff;
+
+  --red-color: #ff7c7c;
+  --warning-background: rgba(255, 124, 124, 0.17);
+  --warning-icon-background: rgba(255, 124, 124, 0.5);
+  --warning-color: #f5c1c1;
+
+  /*Admin-Team rank colors*/
+  --default-rank-color: rgba(210, 208, 208, 0.3);
+}
+
+body {
+  background: var(--background-color);
+  font-family: var(--main-font);
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 150px;
+  background: var(--background-color);
+  transition: 0.3s ease-in-out;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .menu-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .menu-mobile .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .menu-mobile .logo img {
+  max-width: 40px;
+  height: auto;
+}
+
+.navbar .menu-mobile .logo h3 {
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.navbar .links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar .links .link {
+  color: var(--description-color);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: 0.2s;
+}
+
+.navbar .links .link.active {
+  color: var(--white-color);
+}
+
+.navbar .links .link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--main-color);
+}
+
+.navbar .links .link:not(.active):hover {
+  color: var(--white-color);
+}
+
+.navbar .menu-mobile .hamburger {
+  color: var(--white-color);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: none;
+}
+
+.navbar .menu-mobile .hamburger:hover {
+  opacity: 0.8;
+}
+
+.navbar.active {
+  max-height: 1000px;
+}
+
+.navbar.active .links {
+  opacity: 1;
+  z-index: 2;
+}
+
+/*my colum*/
+
+.judul-category {
+  color: #39beff;
+}
+
+.categorywarna:hover {
+  color: rgb(185, 131, 14);
+  font-weight: bold;
+}
+
+.categorywarna {
+  color: rgb(255, 208, 0);
+  font-weight: bold;
+}
+
+.comunitaswa {
+  color: rgb(12, 170, 60);
+  font-weight: bold;
+}
+
+.comunitaswa:hover {
+  color: rgb(6, 138, 46);
+  font-weight: bold;
+}
+
+.comunitasdc {
+  color: rgb(22, 83, 196);
+  font-weight: bold;
+}
+
+.comunitasdc:hover {
+  color: rgb(1, 59, 168);
+  font-weight: bold;
+}
+
+/*Ranks MENU*/
+#rank-information .minecraft-ranks-information .description-information {
+  padding: 20px;
+  font-size: 30px;
+  color: #e7e7e7;
+  background-color: #1f2225;
+  padding-bottom: 20px;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+#rank-information
+  .minecraft-ranks-information
+  .description-information
+  .fonts-info {
+  color: rgb(185, 185, 185);
+  font-size: 30px;
+  padding-bottom: 20px;
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#rank-information
+  .minecraft-ranks-information
+  .description-information
+  .font-info-color {
+  color: rgb(145, 145, 145);
+  font-size: 30px;
+}
+#rank-information
+  .minecraft-ranks-information
+  .description-information
+  .list-fitur {
+  color: rgb(30, 202, 255);
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 35px;
+  margin: 30px;
+}
+#rank-information
+  .minecraft-ranks-information
+  .description-information
+  .span-blue {
+  color: rgb(211, 42, 42);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#rank-information .minecraft-ranks-information .border-garis {
+  background-color: #2e2e2e;
+  padding: 30px;
+  margin-top: 90px;
+}
+
+.rankmenu .minecraft-ranks .minecraft-rank-title {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: #39beff;
+}
+
+.description-ranks .info-description {
+  font-size: 20px;
+  color: #cacaca;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.categoryshop {
+  font-size: 10px;
+}
+
+/*Box Ranks*/
+.rankmenu .menu {
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boxutama {
+  flex-basis: 30%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.boxutama h2 {
+  margin-top: 0;
+}
+
+#boxs {
+  background-color: rgb(95, 95, 95);
+  transition: background-color 0.5s;
+  box-shadow: 0 0 10px 10px rgba(65, 65, 65, 0.5);
+}
+
+/* Eror pages*/
+#eror-page {
+  text-align: justify;
+}
+
+/* Collors */
+
+#golds {
+  color: rgb(255, 145, 0);
+}
+#unggu {
+  color: rgb(225, 0, 255);
+}
+#yellow {
+  color: #ffc400;
+}
+#limeblue {
+  color: #70cfff;
+}
+
+.infobutton {
+  display: flex;
+  justify-content: center;
+}
+
+.texts {
+  background-color: rgb(65, 65, 65);
+  border-radius: 10px;
+  color: #eeeeee;
+  padding: 10px;
+}
+
+.images1 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a:hover {
+  color: #ffffff; /* Change the color to your desired color */
+  text-decoration: none; /* Remove underline */
+}
+
+a {
+  color: #ffffff; /* Change the color to your desired color */
+  text-decoration: none; /* Remove underline */
+}
+
+.menu .boxutama .box-text {
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.infobutton .info .buttoninfo {
+  background: #dc3cf1;
+  border: 2px solid #f292ff;
+  border-radius: 3px;
+  padding: 3px 5px;
+  color: var(--white-color);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 10px;
+}
+
+.infobutton .beli .buttonbeli {
+  background: #dc3cf1;
+  border: 2px solid #f292ff;
+  border-radius: 3px;
+  padding: 10px 60px;
+  color: var(--white-color);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 10px;
+}
+
+/*Footer*/
+#footer {
+  padding: 20px 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#footer p {
+  color: var(--description-color);
+  font-size: 17px;
+}
+
+#footer p span {
+  color: var(--white-color);
+}
+
+#footer .social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+#footer .social-links .link {
+  color: var(--description-color);
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+#footer .social-links .link:hover {
+  color: var(--white-color);
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--stats-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bar-hover);
+}
+
+/*Ot*/
+section:not(#header) .content {
+  padding: 90px 150px;
+  width: 100%;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1625px) {
+  .navbar {
+    padding: 20px 90px;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .navbar {
+    flex-direction: column;
+    gap: 30px;
+    max-height: 90px;
+  }
+
+  .navbar .menu-mobile {
+    width: 100%;
+  }
+
+  .navbar .menu-mobile .hamburger {
+    display: flex;
+  }
+
+  .navbar .links {
+    flex-direction: column;
+    order: 2;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 1625px) {
+  section:not(#header) .content {
+    padding: 90px;
+  }
+
+  #footer {
+    padding: 20px 90px;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  section:not(#header) .content {
+    padding: 50px 30px;
+  }
+
+  #footer {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  #footer {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/*page*/
+#coinmenus {
+  padding-top: 10%;
+}
+#moneymenus {
+  padding-top: 10%;
+}
+#eselmenus {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+/*Span COlor*/
+#vipcolor {
+  font-weight: bold;
+  color: rgb(34, 206, 0);
+}
+
+#mvpcolor {
+  font-weight: bold;
+  color: rgb(255, 57, 57);
+}
+
+#hargarank {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: orange;
+}
